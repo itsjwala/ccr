@@ -35,5 +35,5 @@ class CCR:
                 result = client.run(self.source_code, self.input, self.lang, self.ext)
                 print(result)
         except Exception as e:
-            log.error("something wrong happened {}".format(e))
+            log.error("something went wrong {}".format(e))
             raise e
