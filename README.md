@@ -2,7 +2,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-A [notepad.pw](https://notepad.pw/about) magician in your command line
+Command line tool for executing programs w/o input test file with 40+ languages support 
 
 
 ### Installing
@@ -39,11 +39,13 @@ python setup.py install
 
 # Usage
 
+> will be added soon
+
 # Todo
-
-
-
-
+- [ ] Add more online judge clients 
+- [ ] make simultaneous request from clients using multithreading and pick the fastest one and output it
+- [ ] better logging
+- [ ] better exception handling
 
 ## Contributing
 
