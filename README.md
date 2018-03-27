@@ -46,6 +46,7 @@ python setup.py install
 - [ ] make simultaneous request from clients using multithreading and pick the fastest one and output it
 - [ ] better logging
 - [ ] better exception handling
+- [ ] Documentation
 
 ## Contributing
 
