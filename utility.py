@@ -1,5 +1,4 @@
 import requests
-import json
 
 codechefs_languages_map = dict()
 geeksforgeeks_languages_map = dict()
@@ -12,7 +11,7 @@ geeksforgeeks_languages_map = dict()
 # leetcodes_supported_languages = ["cpp", "java", "python", "python3", "c", "csharp", "javascript", "ruby", "swift", "kotlin", "scala", "bash", "go"]
 
 supported_languages = dict()
-supported_languages_ext = dict()
+supported_languages_extension = dict()
 
 
 def set_codechefs_languages_mapping(id, lang_code):
@@ -24,23 +23,26 @@ def set_codechefs_languages_mapping(id, lang_code):
 
 def set_geeksforgeeks_language_mapping(id, geekslang):
     geeksforgeeks_languages_map[id] = geekslang
+    # geeksforgeeks_languages_map.update(map(id, geekslang))
 
 
 def set_leetcodes_language_mapping(id, leetslang):
     leetcodes_languages_map[id] = leetslang
+    # leetcodes_languages_map.update(map(id, leetslang))
 
 
 def load_supported_languages():
     """
         codeched has extensive range of languages so using it as base for all supported languages by ccr
     """
-    response = json.loads(requests.get('https://www.codechef.com/api/ide/undefined/languages/all').text)
-
+    response = requests.get('https://www.codechef.com/api/ide/undefined/languages/all').json()
+    # response = response.json()
     id = 1
     for lang_code, payload in response['languages'].items():
         lang = "_".join(payload['full_name'].lower().split())
         supported_languages[lang] = id
-        supported_languages_ext[payload['extension']] = id
+
+        supported_languages_extension[payload['extension']] = id
         geekslang = leetslang = None
         if lang == 'cpp':
             geekslang = 'Cpp14'
@@ -48,7 +50,8 @@ def load_supported_languages():
         elif lang == 'java':
             geekslang = 'Java'
             leetslang = 'java'
-        elif lang == 'python':
+        # map codechef languages to other clients
+        elif lang == 'python' or lang == 'python3' or lang == 'pypy':
             geekslang = "Python3"
             leetslang = "Python"
         elif lang == 'c':
@@ -84,7 +87,19 @@ def load_supported_languages():
         id += 1
 
 
+def get_id_from_file_extension(ext):
+    try:
+        return supported_languages_extension[ext]
+    except KeyError:
+        return None
+
+
 load_supported_languages()
+
+# print(supported_languages)
+# print("******************")
+# print(supported_languages_extension)
+# print("******************")
 # print(codechefs_languages_map)
 # print("******************")
 # print(geeksforgeeks_languages_map)
