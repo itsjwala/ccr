@@ -2,7 +2,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-Command line tool for executing programs w/o input test file with 40+ languages support
+Command line tool for executing programs with input test file and 40+ languages support.
 
 
 ### Installing
