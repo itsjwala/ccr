@@ -55,7 +55,8 @@ python setup.py install
 ``` sh
   ccr test/test.py -i test/hello.txt -l python3
   ```
-  
+# Demo
+[![asciicast](https://asciinema.org/a/nkDvjjAQ6d0eMhEUMxPNJj2qU.svg)](https://asciinema.org/a/nkDvjjAQ6d0eMhEUMxPNJj2qU)
 # Todo
 - [ ] Add more online judge clients
 - [ ] better logging
