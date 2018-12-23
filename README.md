@@ -1,8 +1,8 @@
 # CCR
 
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+![](https://img.shields.io/badge/python-3-blue.svg?style=for-the-badge&logo=python)
 
-Command line tool for executing programs with input test file and 40+ languages support.
+*Command line tool for executing programs with input test file and 40+ languages support.*
 
 
 ### Installing
