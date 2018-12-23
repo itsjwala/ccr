@@ -38,9 +38,24 @@ python setup.py install
 ```
 
 # Usage
-
-> will be added soon
-
+  Without using input file
+  ``` sh
+  ccr test/test.cpp
+  
+  ```
+  
+  With using input file
+  
+  ``` sh
+  ccr test/test.py -i test/hello.txt
+  ```
+  > Note above method uses extension to detect language
+  
+  Specifying language explicitly
+``` sh
+  ccr test/test.py -i test/hello.txt -l python3
+  ```
+  
 # Todo
 - [ ] Add more online judge clients
 - [ ] better logging
@@ -50,9 +65,9 @@ python setup.py install
 # Note
 
 
-> For running code on python, preferably use `--lang` parameter as python has different version.
+> For running code on python, preferably use `-l` parameter as python has different version.
 
-> Default is <b>python3</b>, if not specifying `--lang`
+> Default is <b>python3</b>, if not specifying `-l`
 
 ## Contributing
 
