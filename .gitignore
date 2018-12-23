@@ -1,2 +1,6 @@
 .idea/
-__pycache__/
+__pycache__/**
+ccr/__pycache__/**
+ccr.egg-info/**
+build/**
+dist/**
