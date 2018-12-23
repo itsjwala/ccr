@@ -2,7 +2,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-Command line tool for executing programs w/o input test file with 40+ languages support 
+Command line tool for executing programs w/o input test file with 40+ languages support
 
 
 ### Installing
@@ -42,11 +42,17 @@ python setup.py install
 > will be added soon
 
 # Todo
-- [ ] Add more online judge clients 
-- [ ] make simultaneous request from clients using multithreading and pick the fastest one and output it
+- [ ] Add more online judge clients
 - [ ] better logging
 - [ ] better exception handling
-- [ ] Documentation
+- [ ] improve cli
+
+# Note
+
+
+> For running code on python, preferably use `--lang` parameter as python has different version.
+
+> Default is <b>python3</b>, if not specifying `--lang`
 
 ## Contributing
 
@@ -62,7 +68,3 @@ See also the list of [contributors](https://github.com/jigarWala/ccr/contributor
 ## License
 
 This project is licensed under the MIT - see the [LICENSE](./LICENSE) file for details
-
-
-
-.
