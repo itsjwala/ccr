@@ -41,16 +41,16 @@ python setup.py install
   Without using input file
   ``` sh
   ccr test/test.cpp
-  
+
   ```
-  
+
   With using input file
-  
+
   ``` sh
   ccr test/test.py -i test/hello.txt
   ```
-  > Note above method uses extension to detect language
-  
+  > Note above methods uses extension to detect language
+
   Specifying language explicitly
 ``` sh
   ccr test/test.py -i test/hello.txt -l python3
@@ -68,7 +68,7 @@ python setup.py install
 
 > For running code on python, preferably use `-l` parameter as python has different version.
 
-> Default is <b>python3</b>, if not specifying `-l`
+> Default is <b>python3</b>, if not specifying by `-l`
 
 ## Contributing
 

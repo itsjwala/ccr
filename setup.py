@@ -9,7 +9,7 @@ except ImportError:
 	from distutils.core import setup
 
 
-dependencies = ['requests']
+dependencies = ['requests','docopt']
 
 
 def publish():
