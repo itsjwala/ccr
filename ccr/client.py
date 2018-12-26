@@ -1,4 +1,5 @@
 from .utility import codechefs_languages_map,geeksforgeeks_languages_map
+import requests
 import logging
 
 log = logging.getLogger("ccr.client")
