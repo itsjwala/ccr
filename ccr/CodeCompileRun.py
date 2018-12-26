@@ -1,5 +1,6 @@
 import logging
 from .client import *
+from .utility import supported_languages,supported_languages_extension
 from  multiprocessing import Pool
 log = logging.getLogger("ccr.CodeCompileRun")
 
@@ -20,6 +21,22 @@ class CCR:
         except Exception as e:
             log.critical('Exception occured at CCR init {}'.format(e))
             raise e
+
+        id = None
+        found_id = False
+        if(lang):
+            try:
+                self.id = supported_languages[lang]
+                found_id = True
+            except KeyError:
+                raise Exception("{} is not a supported language\nccr --help".format(lang))
+
+        if(not found_id):
+            try:
+                self.id = supported_languages_extension[self.ext]
+            except KeyError:
+                raise Exception("{} is not a supported extension\nccr --help".format(extension))
+        
         self.clients = [CodechefClient(), GeeksForGeeksClient()]
 
 
@@ -37,7 +54,7 @@ class CCR:
         try:
             n = len(self.clients)
 
-            args = (self.source_code, self.input, self.lang, self.ext)
+            args = (self.source_code, self.input, self.id)
 
             targets = map(lambda client : client.run,self.clients)
 

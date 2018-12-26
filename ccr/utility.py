@@ -89,13 +89,6 @@ def load_supported_languages():
         id += 1
 
 
-def get_id_from_file_extension(ext):
-    try:
-        return supported_languages_extension[ext]
-    except KeyError:
-        return None
-
-
 def dump_pickle(path,data):
     try:
         with open(path,"wb") as f:

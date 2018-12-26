@@ -1,4 +1,4 @@
-from .utility import *
+from .utility import codechefs_languages_map,geeksforgeeks_languages_map
 import logging
 
 log = logging.getLogger("ccr.client")
@@ -48,24 +48,11 @@ class Client():
     def hit(self):
         return requests.post(self.url, data=self.request_body, headers=self.request_headers)
 
-    def run(self, source_code, input, language, extension):
+    def run(self, source_code, input, lang_id):
         log.info("client {} running".format(self))
-        id = None
-        found_id = False
-        if(language):
-            try:
-                id = supported_languages[language]
-                found_id = True
-            except KeyError:
-                raise Exception("{} is not a supported language\nccr --help".format(language))
 
-        if(not found_id):
-            try:
-                id = get_id_from_file_extension(extension)
-            except KeyError:
-                raise Exception("{} is not a supported extension\nccr --help".format(extension))
         try:
-            return self._run(source_code=source_code, input=input, lang_code=self.get_lang(id))
+            return self._run(source_code=source_code, input=input, lang_code=self.get_lang(lang_id))
         except KeyError:
             log.warning("{} is not supported client for language:{} and/or file extension:{}".format(self, language, extension))
         except Exception as e:
