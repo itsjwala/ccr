@@ -35,7 +35,7 @@ class CCR:
             try:
                 self.id = supported_languages_extension[self.ext]
             except KeyError:
-                raise Exception("{} is not a supported extension\nccr --help".format(extension))
+                raise Exception("{} is not a supported extension, use -l to specify language explicitly\nccr --help for more".format(self.ext))
         
         self.clients = [CodechefClient(), GeeksForGeeksClient()]
 

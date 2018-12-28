@@ -55,7 +55,7 @@ class Client():
         try:
             return self._run(source_code=source_code, input=input, lang_code=self.get_lang(lang_id))
         except KeyError:
-            log.warning("{} is not supported client for language:{} and/or file extension:{}".format(self, language, extension))
+            log.warning("{} is not supported client for language id : {}".format(self,lang_id))
         except Exception as e:
             log.error("something went wrong in run method, {}".format(e))
 
