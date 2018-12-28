@@ -1,6 +1,6 @@
 # CCR
 
-![](https://img.shields.io/badge/python-3-blue.svg?style=for-the-badge&logo=python)
+![](https://img.shields.io/badge/python-3-blue.svg?style=for-the-badge&logo=python) [![HitCount](http://hits.dwyl.io/jigarWala/ccr.svg)](http://hits.dwyl.io/jigarWala/ccr)
 
 *Command line tool for executing programs with input test file and 40+ languages support.*
 
