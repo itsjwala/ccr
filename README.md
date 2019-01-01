@@ -57,11 +57,6 @@ python setup.py install
   ```
 # Demo
 [![asciicast](https://asciinema.org/a/nkDvjjAQ6d0eMhEUMxPNJj2qU.svg)](https://asciinema.org/a/nkDvjjAQ6d0eMhEUMxPNJj2qU)
-# Todo
-- [ ] Add more online judge clients
-- [ ] better logging
-- [ ] better exception handling
-- [ ] improve cli
 
 # Note
 
